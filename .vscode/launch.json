@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-SpringbootApirestApplication<springboot-apirest>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.mafuentes.springboot.apirest.springbootapirest.SpringbootApirestApplication",
+            "projectName": "springboot-apirest",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

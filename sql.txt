@@ -1,0 +1,6 @@
+mysql -u sammy -p
+Huenei$2022
+
+systemctl status mysql.service
+
+sudo systemctl start mysql.service
