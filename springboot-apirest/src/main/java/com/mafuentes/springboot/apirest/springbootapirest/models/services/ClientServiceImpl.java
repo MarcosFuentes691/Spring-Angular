@@ -21,20 +21,17 @@ public class ClientServiceImpl implements IClientService {
 
     @Override
     public Client findById(Long id) {
-        // TODO Auto-generated method stub
-        return null;
+        return clientDao.findById(id).orElse(null);
     }
 
     @Override
     public Client save(Client client) {
-        // TODO Auto-generated method stub
-        return null;
+        return clientDao.save(client);
     }
 
     @Override
     public void delete(Long id) {
-        // TODO Auto-generated method stub
-        
+        clientDao.deleteById(id);
     }
 
 }
