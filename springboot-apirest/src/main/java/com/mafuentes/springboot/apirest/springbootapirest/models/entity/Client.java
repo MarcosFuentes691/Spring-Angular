@@ -10,6 +10,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.PrePersist;
 import javax.persistence.Table;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
 
 @Entity
 @Table(name = "clients")
@@ -27,8 +30,16 @@ public class Client implements Serializable {
     private long id;
 
     @Column(nullable = false)
+    @NotEmpty
+    @Size(min = 4, max = 12)
     private String name;
+
+    @NotEmpty
+    @Size(min = 4, max = 12)
     private String surname;
+
+    @NotEmpty
+    @Email
     @Column(nullable = false, unique = true)
     private String email;
 
