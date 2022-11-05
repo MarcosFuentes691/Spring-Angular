@@ -3,6 +3,8 @@ package com.mafuentes.springboot.apirest.springbootapirest.models.services;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import com.mafuentes.springboot.apirest.springbootapirest.models.dao.IClientDao;
@@ -17,6 +19,11 @@ public class ClientServiceImpl implements IClientService {
     @Override
     public List<Client> findAll() {
         return (List<Client>) clientDao.findAll();
+    }
+
+    @Override
+    public Page<Client> findAll(Pageable pageable) {
+        return clientDao.findAll(pageable);
     }
 
     @Override

@@ -31,11 +31,11 @@ public class Client implements Serializable {
 
     @Column(nullable = false)
     @NotEmpty
-    @Size(min = 4, max = 12)
+    @Size(min = 4, max = 18)
     private String name;
 
     @NotEmpty
-    @Size(min = 4, max = 12)
+    @Size(min = 4, max = 18)
     private String surname;
 
     @NotEmpty
